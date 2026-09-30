@@ -1,0 +1,1 @@
+import mongoose from "mongoose";const s=new mongoose.Schema({recipient:{type:mongoose.Schema.Types.ObjectId,ref:"User"},sender:{type:mongoose.Schema.Types.ObjectId,ref:"User"},type:{type:String,enum:["like","comment","follow"]},post:{type:mongoose.Schema.Types.ObjectId,ref:"Post",default:null}},{timestamps:true});export default mongoose.model("Notification",s);
